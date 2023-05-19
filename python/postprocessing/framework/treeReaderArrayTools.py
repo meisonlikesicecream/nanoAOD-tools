@@ -9,7 +9,7 @@ def InputTree(tree, entrylist=ROOT.MakeNullPointer(ROOT.TEntryList)):
         return tree  # don't initialize twice
     tree.entry = -1
     tree._entrylist = entrylist
-    tree._ttreereader = ROOT.TTreeReader(tree, tree._entrylist)
+    tree._ttreereader = ROOT.TTreeReader(tree, entrylist)
     tree._ttreereader._isClean = True
     tree._ttrvs = {}
     tree._ttras = {}
